@@ -68,8 +68,11 @@ Minecraft item textures):
 - **Click** an item → confirm screen (green wool = buy, red wool = cancel)
 - **Shift-click** an item → bought **instantly**, no confirm
 - **Hopper** → change sorting: newest → cheapest → priciest
-- **Ender chest** → ⚡ **Quick Buy**: every item type for sale in one menu
-  with its cheapest price — click one to see all of them, cheapest first
+- **Ender chest** → ⚡ **Quick Buy**: your own page of gray panes. Pick an
+  item up from your inventory and click a pane to save it there (you keep
+  the item). From then on, clicking that saved item **buys the cheapest
+  one on the auction house instantly** — no confirm, no searching.
+  Right-click a saved item to remove it. Saved forever, even after restarts
 - **Anvil** → refresh the listings
 - **Sign** → search (type `/ah <item name>`; click the sign again to clear)
 - **Chest** → *Your Items*: take things off sale, claim back items that
