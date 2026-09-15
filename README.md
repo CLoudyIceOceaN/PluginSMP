@@ -46,9 +46,16 @@ data files, not in the jars).
 
 ### Sell menu & auction house (SMPauctionplugin)
 
+What the menus look like (mockups — in game it's drawn with real
+Minecraft item textures):
+
+| The auction house | The sell menu |
+|---|---|
+| ![Auction house](https://cloudyiceocean.github.io/SMPauctionplugin/images/auction-house.svg) | ![Sell menu](https://cloudyiceocean.github.io/SMPauctionplugin/images/sell-menu.svg) |
+
 | Command | Who | What it does |
 |---|---|---|
-| `/sell` | everyone | Opens the sell menu — drop items in, press the green button, get paid |
+| `/sell` | everyone | Opens the sell menu — drop items in, hover the green pane (bottom-right) to see your total, click it, get paid |
 | `/worth` | everyone | Says what the item in your hand sells for |
 | `/ah` | everyone | Opens the auction house |
 | `/ah sell 5k` | everyone | Puts the item in your hand up for sale for $5,000 |
