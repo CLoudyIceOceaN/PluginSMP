@@ -58,6 +58,7 @@ Minecraft item textures):
 | `/sell` | everyone | Opens the sell menu — drop items in, hover the green pane (bottom-right) to see your total, click it, get paid |
 | `/worth` | everyone | Says what the item in your hand sells for |
 | `/ah` | everyone | Opens the auction house |
+| `/ah diamond` | everyone | Searches the auction house for an item (cheapest first) |
 | `/ah sell 5k` | everyone | Puts the item in your hand up for sale for $5,000 |
 
 **Amounts everywhere** understand shortcuts: `500`, `2k` (= 2,000),
@@ -65,12 +66,15 @@ Minecraft item textures):
 
 **Inside the auction house:**
 - **Click** an item → confirm screen (green wool = buy, red wool = cancel)
-- **Shift-click** an item → ⚡ **quick buy** — bought instantly, no confirm
-- **Arrows** (bottom corners) → previous / next page
+- **Shift-click** an item → bought **instantly**, no confirm
 - **Hopper** → change sorting: newest → cheapest → priciest
-- **Chest** → *Your Listings*: click one of your items to take it off sale,
-  and claim back items that expired or that you cancelled
-- **Gold ingot** → shows your balance
+- **Ender chest** → ⚡ **Quick Buy**: every item type for sale in one menu
+  with its cheapest price — click one to see all of them, cheapest first
+- **Anvil** → refresh the listings
+- **Sign** → search (type `/ah <item name>`; click the sign again to clear)
+- **Chest** → *Your Items*: take things off sale, claim back items that
+  expired or that you cancelled
+- **Arrow** (bottom right) → next page
 
 ---
 
