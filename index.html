@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PluginSMP</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(180deg, #0d1117 0%, #101a12 100%);
+    color: #f2f2f2; min-height: 100vh; padding: 48px 16px;
+    display: flex; justify-content: center;
+  }
+  .wrap { max-width: 600px; width: 100%; }
+  h1 { font-size: 2.1rem; margin-bottom: 4px; }
+  h1 span { color: #5ad672; }
+  .sub { color: #b9b9b9; margin-bottom: 28px; }
+  .card {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 14px; padding: 20px 22px; margin-bottom: 16px;
+  }
+  .card h2 { font-size: 1.05rem; color: #5ad672; margin-bottom: 10px; }
+  .cmdrow { display: flex; gap: 8px; margin: 10px 0 8px; }
+  .cmd {
+    flex: 1; background: #0b0e15; border: 1px solid rgba(255,255,255,.15);
+    border-radius: 10px; padding: 12px 14px; overflow-x: auto; white-space: nowrap;
+    font-family: ui-monospace, Menlo, monospace; font-size: .85rem; color: #7fe07f;
+  }
+  .copy {
+    background: rgba(255,255,255,.12); color: #f2f2f2; border: 0;
+    border-radius: 10px; padding: 0 16px; font-weight: 700; cursor: pointer;
+    font-size: .9rem;
+  }
+  .copy:hover { background: rgba(255,255,255,.2); }
+  .note { color: #b9b9b9; font-size: .9rem; }
+  code {
+    background: rgba(255,255,255,.12); padding: 2px 7px; border-radius: 6px;
+    font-family: ui-monospace, Menlo, monospace; font-size: .9em;
+  }
+  .plugin { display: flex; align-items: center; gap: 14px; padding: 12px 0; }
+  .plugin + .plugin { border-top: 1px solid rgba(255,255,255,.08); }
+  .dot { font-size: 1.6rem; }
+  .plugin b { display: block; }
+  .plugin small { color: #b9b9b9; }
+  .plugin .links { margin-left: auto; text-align: right; white-space: nowrap; }
+  a { color: #7fe07f; }
+  .guide {
+    display: block; text-align: center; text-decoration: none;
+    background: #5ad672; color: #101a12; font-weight: 800; font-size: 1.1rem;
+    padding: 15px; border-radius: 14px; margin-bottom: 16px;
+  }
+  .guide:hover { background: #79e78e; }
+  footer { text-align: center; color: #777; font-size: .85rem; margin-top: 28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1><span>Plugin</span>SMP</h1>
+  <p class="sub">The whole plugin pack for BladeSMP — money, sell menu, and
+  auction house. For Eaglercraft 1.8 / Spigot 1.8.8 servers.</p>
+
+  <div class="card">
+    <h2>&#9889; Install EVERYTHING with one command</h2>
+    <p class="note">Terminal → <code>cd</code> into your server folder → paste.
+    Running it again later updates every plugin (money and auctions are kept).</p>
+    <div class="cmdrow">
+      <div class="cmd" id="cmd">curl -sL https://cloudyiceocean.github.io/PluginSMP/install.sh | bash</div>
+      <button class="copy" onclick="navigator.clipboard.writeText(document.getElementById('cmd').textContent).then(()=>{this.textContent='&#10003;';setTimeout(()=>this.textContent='Copy',1200)})">Copy</button>
+    </div>
+    <p class="note">Then restart the server. Done!</p>
+  </div>
+
+  <a class="guide" href="https://github.com/CLoudyIceOceaN/PluginSMP#readme">&#128214; Open the full guide (every command &amp; setting)</a>
+
+  <div class="card">
+    <h2>What's in the pack</h2>
+    <!-- ADD NEW PLUGINS HERE: copy one .plugin block and change the text -->
+    <div class="plugin">
+      <span class="dot">&#128176;</span>
+      <div>
+        <b>SMPmoneyplugin</b>
+        <small>Money, /pay, /baltop + the balance board on the right</small>
+      </div>
+      <div class="links">
+        <a href="https://cloudyiceocean.github.io/SMPmoneyplugin/">page</a> ·
+        <a href="https://github.com/CLoudyIceOceaN/SMPmoneyplugin">code</a>
+      </div>
+    </div>
+    <div class="plugin">
+      <span class="dot">&#128296;</span>
+      <div>
+        <b>SMPauctionplugin</b>
+        <small>/sell menu + /ah auction house with &#9889; quick buy</small>
+      </div>
+      <div class="links">
+        <a href="https://cloudyiceocean.github.io/SMPauctionplugin/">page</a> ·
+        <a href="https://github.com/CLoudyIceOceaN/SMPauctionplugin">code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Quick command cheat-sheet</h2>
+    <p class="note">
+      <code>/bal</code> money &middot;
+      <code>/pay Steve 2k</code> send money &middot;
+      <code>/baltop</code> richest &middot;
+      <code>/sell</code> sell menu &middot;
+      <code>/worth</code> item price &middot;
+      <code>/ah</code> auction house &middot;
+      <code>/ah sell 5k</code> list your item &middot;
+      shift-click in /ah = quick buy
+    </p>
+  </div>
+
+  <footer>Made by Colin · <a href="https://github.com/CLoudyIceOceaN/PluginSMP">edit this page on GitHub</a></footer>
+</div>
+</body>
+</html>
