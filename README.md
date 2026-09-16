@@ -68,7 +68,9 @@ Minecraft item textures):
 |---|---|---|
 | `/titles` | everyone | Opens the titles shop — titles are enchanted books; the **chest at the bottom** shows the ones you own so you can equip them |
 | `/titles reload` | OP only | Reloads config.yml after adding or editing titles |
-| `/titles give Steve king` | OP only | Gives a player a title for free |
+| `/titles give Steve king` | OP only | Gives a title for free — perfect for events and giveaways |
+| `/titles take Steve king` | OP only | Takes a title away again |
+| `/titles npc` | OP only | Then right-click a mob (like a villager) — right-clicking it opens the titles shop for everyone |
 
 Your equipped title floats **above your nametag** for everyone to see,
 and stays through deaths, teleports, and relogs.
@@ -148,21 +150,34 @@ Copy an example from the config (they're right there, commented out):
 ```yaml
 titles:
   king:
-    name: "&6&lKING"
+    name: "&6&l♛ KING ♛"
     price: 50000
     font: normal
-  shadow:
-    name: "&8Shadow"
-    price: 10000
-    font: smallcaps
+    description:
+      - "&7For players with WAY too much money."
+  rainbow:
+    name: "RAINBOW"
+    price: 250000
+    rainbow: true
+    bold: true
+  champion:
+    name: "&e&l✦ CHAMPION ✦"
+    buyable: false
 ```
 
 - the id (`king`) is what commands use; players see the `name`
+- `name` takes **`&` colors** and pasted **symbols** (✦ ★ ♛ ❖ ☠ ➤)
 - `font` restyles the letters: `normal`, `smallcaps` (small capital
   letters — looks the best), `fullwidth` (wide letters), `circled`
   (letters in circles). If a font shows squares in game, use `normal`.
+- `rainbow: true` colors every letter differently (`bold: true` too)
+- `buyable: false` = **event/giveaway reward** — can't be bought, only
+  handed out with `/titles give`
+- `description` = extra lines shown on the book in the shop
 
 Save, then `/titles reload` in game — **no restart needed**.
+To make a **titles NPC**: type `/titles npc`, right-click a villager —
+now right-clicking it opens the shop for everyone.
 
 ### Color codes (used in every config)
 
