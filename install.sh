@@ -12,6 +12,7 @@ set -e
 PLUGINS=(
   "SMPmoneyplugin|https://cloudyiceocean.github.io/SMPmoneyplugin/SMPmoneyplugin.jar"
   "SMPauctionplugin|https://cloudyiceocean.github.io/SMPauctionplugin/SMPauctionplugin.jar"
+  "SMPtitlesplugin|https://cloudyiceocean.github.io/SMPtitlesplugin/SMPtitlesplugin.jar"
 )
 
 if [ -d "plugins" ]; then

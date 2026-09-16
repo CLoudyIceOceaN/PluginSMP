@@ -9,6 +9,7 @@ made for Eaglercraft 1.8 / Spigot 1.8.8 servers.
 |---|---|---|
 | **SMPmoneyplugin** | Money, `/pay`, `/baltop`, and the balance board on the right of the screen | [page](https://cloudyiceocean.github.io/SMPmoneyplugin/) · [code](https://github.com/CLoudyIceOceaN/SMPmoneyplugin) |
 | **SMPauctionplugin** | `/sell` menu + `/ah` auction house with quick buy | [page](https://cloudyiceocean.github.io/SMPauctionplugin/) · [code](https://github.com/CLoudyIceOceaN/SMPauctionplugin) |
+| **SMPtitlesplugin** | `/titles` — buy titles that float above your nametag | [page](https://cloudyiceocean.github.io/SMPtitlesplugin/) · [code](https://github.com/CLoudyIceOceaN/SMPtitlesplugin) |
 
 ---
 
@@ -60,6 +61,17 @@ Minecraft item textures):
 | `/ah` | everyone | Opens the auction house |
 | `/ah diamond` | everyone | Searches the auction house for an item (cheapest first) |
 | `/ah sell 5k` | everyone | Puts the item in your hand up for sale for $5,000 |
+
+### Titles (SMPtitlesplugin)
+
+| Command | Who | What it does |
+|---|---|---|
+| `/titles` | everyone | Opens the titles shop — titles are enchanted books; the **chest at the bottom** shows the ones you own so you can equip them |
+| `/titles reload` | OP only | Reloads config.yml after adding or editing titles |
+| `/titles give Steve king` | OP only | Gives a player a title for free |
+
+Your equipped title floats **above your nametag** for everyone to see,
+and stays through deaths, teleports, and relogs.
 
 **Amounts everywhere** understand shortcuts: `500`, `2k` (= 2,000),
 `1.5m` (= 1,500,000), `1b` (= 1,000,000,000).
@@ -127,6 +139,30 @@ gunpowder = `SULPHUR`, raw porkchop = `PORK`, carrot = `CARROT_ITEM`,
 potato = `POTATO_ITEM`, nether wart = `NETHER_STALK`, fish = `RAW_FISH`.
 If a price doesn't work, the name is probably wrong — check the server
 log at startup for complaints.
+
+### Titles — `plugins/SMPtitlesplugin/config.yml`
+
+**The plugin ships with NO titles** — the server owner adds their own.
+Copy an example from the config (they're right there, commented out):
+
+```yaml
+titles:
+  king:
+    name: "&6&lKING"
+    price: 50000
+    font: normal
+  shadow:
+    name: "&8Shadow"
+    price: 10000
+    font: smallcaps
+```
+
+- the id (`king`) is what commands use; players see the `name`
+- `font` restyles the letters: `normal`, `smallcaps` (small capital
+  letters — looks the best), `fullwidth` (wide letters), `circled`
+  (letters in circles). If a font shows squares in game, use `normal`.
+
+Save, then `/titles reload` in game — **no restart needed**.
 
 ### Color codes (used in every config)
 
